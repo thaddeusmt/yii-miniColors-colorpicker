@@ -14,26 +14,22 @@ This extension contains two classes:
 
 SColorPicker Widget - Generates a standard HTML input tag with the ID you specify
 
-<pre>
 $this->widget('ext.SMiniColors.SColorPicker', array(
     'id' => 'myInputId',
     'defaultValue'=>'#000000',
     'options' => array(), // jQuery plugin options
     'htmlOptions' => array(), // html attributes
 ));
-</pre>
 
 SActiveColorPicker Widget - Generates an "Active" HTML input for the CActiveRecord model you specify
 
-<pre>
 $this->widget('ext.SMiniColors.SActiveColorPicker', array(
     'id' => 'myInputId',
     'defaultValue'=>'#000000',
     'options' => array(), // jQuery plugin options
     'htmlOptions' => array(), // html attributes
 ));
-</pre>
 
 This extension was created by Evan Johnson for http://splashlabsocial.com.
 
-It is released under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License, version 2</a>
+It is released under the GNU General Public License, version 2 http://www.gnu.org/licenses/gpl-2.0.html

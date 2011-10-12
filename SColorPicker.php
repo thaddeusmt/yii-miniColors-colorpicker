@@ -3,7 +3,8 @@
  * SColorPicker class file.
  *
  * @author Evan Johnson <thaddeusmt@gmail.com>
- * @link http://www.yiiframework.com/extension/miniColors
+ * @link http://www.yiiframework.com/extension/minicolors-colorpicker/
+ * @link https://github.com/thaddeusmt/yii-miniColors-colorpicker
  * @copyright Copyright &copy; 2011 SplashLab Social  http://splashlabsocial.com
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2
  *
