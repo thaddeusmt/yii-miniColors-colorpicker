@@ -17,6 +17,7 @@
  * $this->widget('ext.SMiniColors.SColorPicker', array(
  *     'id' => 'myInputId',
  *     'defaultValue'=>'#000000',
+ *     'hidden'=>false, // defaults to false - can be set to hide the textarea with the hex
  *     'options' => array(), // jQuery plugin options
  *     'htmlOptions' => array(), // html attributes
  * ));
@@ -26,6 +27,10 @@
 
 class SColorPicker extends CWidget
 {
+  /**
+   * @var whether the textfield with the hex value is shown or not (next to the color picker)
+   */
+  public $hidden = false;
   /**
    * @var array miniColors jQuery plugin options
    */
@@ -72,6 +77,9 @@ class SColorPicker extends CWidget
 	 */
   public function run()
   {
+    if ($this->hidden)
+      echo CHtml::hiddenField($this->getId(), $this->defaultValue, $this->htmlOptions);
+    else
       echo CHtml::textField($this->getId(), $this->defaultValue, $this->htmlOptions);
   }
 }

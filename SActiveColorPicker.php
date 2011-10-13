@@ -17,6 +17,7 @@
  * $this->widget('ext.SMiniColors.SActiveColorPicker', array(
  *     'model' => $model,
  *     'attribute' => 'myModelAttribute',
+ *     'hidden'=>false, // defaults to false - can be set to hide the textarea with the hex
  *     'options' => array(), // jQuery plugin options
  *     'htmlOptions' => array(), // html attributes
  * ));
@@ -34,6 +35,10 @@ class SActiveColorPicker extends CWidget
    * @var name of the CActiveRecord model attribute
    */
   public $attribute;
+  /**
+   * @var whether the textfield with the hex value is shown or not (next to the color picker)
+   */
+  public $hidden = false;
   /**
    * @var array miniColors jQuery plugin options
    */
@@ -71,6 +76,9 @@ class SActiveColorPicker extends CWidget
 	 */
   public function run()
   {
-    echo CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
+    if ($this->hidden)
+      echo CHtml::activeHiddenField($this->model, $this->attribute, $this->htmlOptions);
+    else
+      echo CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
   }
 }
